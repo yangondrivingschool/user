@@ -13,7 +13,7 @@ class BottomNav extends StatelessWidget {
     final HomeController controller = Get.find();
     return Container(
       width: double.infinity,
-      height: 70,
+      height: 90,
       decoration: BoxDecoration(
         color: Colors.white,
         borderRadius: BorderRadius.only(
@@ -43,29 +43,29 @@ class BottomNav extends StatelessWidget {
                       FontAwesomeIcons.home,
                       color: controller.navIndex.value == 0
                           ? homeIndicatorColor
-                          : null,
+                          : Colors.grey,
                     ),
                   ),
-                  Text("Home"),
+                  Text("ပင်မစာမျက်နှာ"),
                 ],
               ),
             ),
-            Expanded(
-              child: Column(
-                children: [
-                  IconButton(
-                    onPressed: () {
-                      controller.changeNav(1);
-                    },
-                    icon: Image.asset(
-                      "assets/hotsale.png",
-                      color: controller.navIndex.value == 1 ? null : Colors.black,
-                    ),
-                  ),
-                  Text("Hot Sales"),
-                ],
-              ),
-            ),
+            // Expanded(
+            //   child: Column(
+            //     children: [
+            //       IconButton(
+            //         onPressed: () {
+            //           controller.changeNav(1);
+            //         },
+            //         icon: Image.asset(
+            //           "assets/hotsale.png",
+            //           color: controller.navIndex.value == 1 ? Colors.grey : Colors.black,
+            //         ),
+            //       ),
+            //       Text("Hot Sales"),
+            //     ],
+            //   ),
+            // ),
             Expanded(
               child: Column(
                 children: [
@@ -95,7 +95,7 @@ class BottomNav extends StatelessWidget {
                       ],
                     ),
                   ),
-                  Text("Cart"),
+                  Text("စျေးခြင်း"),
                 ],
               ),
             ),
@@ -113,7 +113,7 @@ class BottomNav extends StatelessWidget {
                           : null,
                     ),
                   ),
-                  Text("Favourite"),
+                  Text("အခြား"),
                 ],
               ),
             ),
@@ -132,7 +132,7 @@ class BottomNav extends StatelessWidget {
                     ),
                   ),
                   Text(
-                    "Orders",
+                    "ကျွန်ုပ်",
                     overflow: TextOverflow.ellipsis,
                     maxLines: 1,
                   ),

@@ -218,6 +218,12 @@
       "languageVersion": "2.12"
     },
     {
+      "name": "datetime_picker_formfield",
+      "rootUri": "file:///Users/zarnibwar/Developer/flutter/.pub-cache/hosted/pub.dartlang.org/datetime_picker_formfield-2.0.0",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
       "name": "dbus",
       "rootUri": "file:///Users/zarnibwar/Developer/flutter/.pub-cache/hosted/pub.dartlang.org/dbus-0.7.3",
       "packageUri": "lib/",
@@ -234,6 +240,12 @@
       "rootUri": "file:///Users/zarnibwar/Developer/flutter/.pub-cache/hosted/pub.dartlang.org/dots_indicator-2.1.0",
       "packageUri": "lib/",
       "languageVersion": "2.12"
+    },
+    {
+      "name": "dropdownfield",
+      "rootUri": "file:///Users/zarnibwar/Developer/flutter/.pub-cache/hosted/pub.dartlang.org/dropdownfield-1.0.3",
+      "packageUri": "lib/",
+      "languageVersion": "2.1"
     },
     {
       "name": "fake_async",
@@ -400,6 +412,12 @@
     {
       "name": "flutter_staggered_grid_view",
       "rootUri": "file:///Users/zarnibwar/Developer/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_staggered_grid_view-0.4.0",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
+      "name": "flutter_svg",
+      "rootUri": "file:///Users/zarnibwar/Developer/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_svg-0.21.0+1",
       "packageUri": "lib/",
       "languageVersion": "2.12"
     },
@@ -652,6 +670,18 @@
     {
       "name": "path",
       "rootUri": "file:///Users/zarnibwar/Developer/flutter/.pub-cache/hosted/pub.dartlang.org/path-1.8.1",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
+      "name": "path_drawing",
+      "rootUri": "file:///Users/zarnibwar/Developer/flutter/.pub-cache/hosted/pub.dartlang.org/path_drawing-0.5.1+1",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
+      "name": "path_parsing",
+      "rootUri": "file:///Users/zarnibwar/Developer/flutter/.pub-cache/hosted/pub.dartlang.org/path_parsing-0.2.1",
       "packageUri": "lib/",
       "languageVersion": "2.12"
     },
@@ -1052,7 +1082,7 @@
       "languageVersion": "2.16"
     }
   ],
-  "generated": "2022-07-14T13:50:24.431384Z",
+  "generated": "2022-07-14T16:26:39.105328Z",
   "generator": "pub",
   "generatorVersion": "2.17.5"
 }

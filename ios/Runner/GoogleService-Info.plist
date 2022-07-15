@@ -3,23 +3,23 @@
 <plist version="1.0">
 <dict>
 	<key>CLIENT_ID</key>
-	<string>88132190074-i0q3of60ague5do017s7l751sofj1c75.apps.googleusercontent.com</string>
+	<string>562606680354-vokl3gfjs9dphcngffg6pqunc7a2cr78.apps.googleusercontent.com</string>
 	<key>REVERSED_CLIENT_ID</key>
-	<string>com.googleusercontent.apps.88132190074-i0q3of60ague5do017s7l751sofj1c75</string>
+	<string>com.googleusercontent.apps.562606680354-vokl3gfjs9dphcngffg6pqunc7a2cr78</string>
 	<key>ANDROID_CLIENT_ID</key>
-	<string>88132190074-7oph697oe6oorjg6knlk70nep53rh6u3.apps.googleusercontent.com</string>
+	<string>562606680354-t4jnje8pqs4ev2vobjmthdc1g1sr6ai3.apps.googleusercontent.com</string>
 	<key>API_KEY</key>
-	<string>AIzaSyCQsjnTwB4jjwh955dBYuZJG89f4rNKqJ4</string>
+	<string>AIzaSyDCOl_tIIhIyQbr_WRO8XznfRqCPd9prx4</string>
 	<key>GCM_SENDER_ID</key>
-	<string>88132190074</string>
+	<string>562606680354</string>
 	<key>PLIST_VERSION</key>
 	<string>1</string>
 	<key>BUNDLE_ID</key>
-	<string>com.kzn.hm</string>
+	<string>com.kzn.yds</string>
 	<key>PROJECT_ID</key>
-	<string>hammies-mandalian</string>
+	<string>yangon-driving-school</string>
 	<key>STORAGE_BUCKET</key>
-	<string>hammies-mandalian.appspot.com</string>
+	<string>yangon-driving-school.appspot.com</string>
 	<key>IS_ADS_ENABLED</key>
 	<false></false>
 	<key>IS_ANALYTICS_ENABLED</key>
@@ -31,6 +31,6 @@
 	<key>IS_SIGNIN_ENABLED</key>
 	<true></true>
 	<key>GOOGLE_APP_ID</key>
-	<string>1:88132190074:ios:618512339ae863000360c3</string>
+	<string>1:562606680354:ios:b559c67272d8a4acea5d7b</string>
 </dict>
 </plist>

@@ -1,41 +1,41 @@
 {
   "project_info": {
-    "project_number": "88132190074",
-    "project_id": "hammies-mandalian",
-    "storage_bucket": "hammies-mandalian.appspot.com"
+    "project_number": "562606680354",
+    "project_id": "yangon-driving-school",
+    "storage_bucket": "yangon-driving-school.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:88132190074:android:282db47c5dd615050360c3",
+        "mobilesdk_app_id": "1:562606680354:android:077053ca057a3b9eea5d7b",
         "android_client_info": {
-          "package_name": "com.kzn.hm"
+          "package_name": "com.kzn.yds"
         }
       },
       "oauth_client": [
         {
-          "client_id": "88132190074-s8rkjk1f42c8isk5k9h15nl93kv216t4.apps.googleusercontent.com",
+          "client_id": "562606680354-t4jnje8pqs4ev2vobjmthdc1g1sr6ai3.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
-            "package_name": "com.kzn.hm",
-            "certificate_hash": "e17daea38df4a03ba76494856f8094fe5d27d6f8"
+            "package_name": "com.kzn.yds",
+            "certificate_hash": "0cace59864e260a684ebebf2cc33b999f2950cd4"
           }
         },
         {
-          "client_id": "88132190074-cpqbiaqatm8anr3p2uu5pif66tidk0ke.apps.googleusercontent.com",
+          "client_id": "562606680354-fso9ilpnbcj2lnbod4agb84cv6f19t4j.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyCceREyk-KMRhccRi4Gf3VquYHk-zWqedE"
+          "current_key": "AIzaSyD5oROWS1xcEJFi-f-nID0NDOYrLwgCURo"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "88132190074-cpqbiaqatm8anr3p2uu5pif66tidk0ke.apps.googleusercontent.com",
+              "client_id": "562606680354-fso9ilpnbcj2lnbod4agb84cv6f19t4j.apps.googleusercontent.com",
               "client_type": 3
             }
           ]

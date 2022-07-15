@@ -106,42 +106,29 @@ class _HomeScreenState extends State<HomeScreen> {
       appBar: AppBar(
         backgroundColor: appBarColor,
         elevation: 0,
-        title: Text(
-          "Hammies  Mandalian",
-          style: TextStyle(
-            fontSize: 16,
-            fontWeight: FontWeight.bold,
-            color: appBarTitleColor,
-            letterSpacing: 1,
-            wordSpacing: 1,
-          ),
+        title: Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Image.asset(
+              'assets/logo.png',
+              fit: BoxFit.contain,
+              height: 40,
+            ),
+            Container(
+              padding: const EdgeInsets.only(left: 10),
+              child: Text("YANGON DRIVING SCHOOL",
+
+                style: TextStyle(
+                  color: Colors.black,
+                    fontSize: 13,
+                    wordSpacing: 2,
+                    letterSpacing: 2),
+              ),
+            ),
+          ],
         ),
         // centerTitle: true,
         actions: [
-          // InkWell(
-          //   onTap: () {
-          //     ///TODO
-          //   },
-          //   child: Container(
-          //     margin: EdgeInsets.only(right: 10, top: 10, bottom: 10),
-          //     padding: EdgeInsets.only(left: 10, right: 10),
-          //     alignment: Alignment.center,
-          //     decoration: BoxDecoration(
-          //         color: Colors.white,
-          //         borderRadius: BorderRadius.circular(7),
-          //         boxShadow: [
-          //           BoxShadow(
-          //             color: Colors.grey[200]!,
-          //             spreadRadius: 1,
-          //             offset: Offset(0, 1),
-          //           )
-          //         ]),
-          //     child: Icon(
-          //       Icons.search,
-          //       color: Colors.black,
-          //     ),
-          //   ),
-          // )
           SizedBox(
             width: 40,
             child: ElevatedButton(
@@ -194,47 +181,6 @@ class _HomeScreenState extends State<HomeScreen> {
               size: 22,
             ),
           ),
-          //User Profile
-          InkWell(
-            onTap: () {
-              if (controller.currentUser.value == null) {
-                controller.signInWithGoogle(userProfileUrl);
-              } else {
-                Get.toNamed(userProfileUrl);
-              }
-            },
-            child: Obx(() {
-              return circularNetworkImage(
-                controller.currentUser.value?.image ?? userImage,
-                12,
-              );
-            }),
-          ),
-          const SizedBox(width: 10),
-          // Container(
-          //   margin: EdgeInsets.only(
-          //     top: 7,
-          //     bottom: 10,
-          //     right: 7,
-          //   ),
-          //   child: ElevatedButton(
-          //     style: ButtonStyle(
-          //       backgroundColor: MaterialStateProperty.all(Colors.white),
-          //       overlayColor: MaterialStateProperty.all(Colors.black12),
-          //     ),
-          //     onPressed: () async {
-          //       try {
-          //         await launch('https://m.me/begoniazue');
-          //       } catch (e) {
-          //         print(e);
-          //       }
-          //     },
-          //     child: FaIcon(
-          //       FontAwesomeIcons.facebookMessenger,
-          //       color: Colors.blue,
-          //     ),
-          //   ),
-          // )
         ],
       ),
       body: Obx(
