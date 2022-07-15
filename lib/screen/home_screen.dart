@@ -107,7 +107,6 @@ class _HomeScreenState extends State<HomeScreen> {
         backgroundColor: appBarColor,
         elevation: 0,
         title: Row(
-          mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Image.asset(
               'assets/logo.png',
@@ -129,6 +128,7 @@ class _HomeScreenState extends State<HomeScreen> {
         ),
         // centerTitle: true,
         actions: [
+
           SizedBox(
             width: 40,
             child: ElevatedButton(
@@ -170,7 +170,7 @@ class _HomeScreenState extends State<HomeScreen> {
             ),
             onPressed: () async {
               try {
-                await launch('https://m.me/HammiesMandalian25');
+                await launch('https://m.me/Yangondrivingschool');
               } catch (e) {
                 print(e);
               }
@@ -181,6 +181,8 @@ class _HomeScreenState extends State<HomeScreen> {
               size: 22,
             ),
           ),
+          //User Profile
+
         ],
       ),
       body: Obx(

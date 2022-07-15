@@ -22,7 +22,7 @@ const String purchaseCollection = 'purchases';
 const String brandCollection = 'brandProducts';
 const String normalUserCollection = "normalUsers";
 const String userImage =
-    "https://kzn.fra1.cdn.digitaloceanspaces.com/Hammies/IMG_2508.PNG";
+    "https://www.pngitem.com/pimgs/m/78-786293_1240-x-1240-0-avatar-profile-icon-png.png";
 /*const List<String> priceList = [
   '၁ ထည် လက်လီ ဈေးနှုန်း',
   'လက်ကား ဈေးနှုန်း',

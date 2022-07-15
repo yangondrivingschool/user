@@ -16,20 +16,34 @@ class UserProfileScreen extends StatelessWidget {
     return Scaffold(
       backgroundColor: Colors.white,
       appBar: AppBar(
+        leading: IconButton(
+          icon: Icon(Icons.arrow_back, color: Colors.black),
+          onPressed: () => Navigator.of(context).pop(),
+        ),
         backgroundColor: appBarColor,
         elevation: 2,
         iconTheme: IconThemeData(
           color: Colors.black,
         ),
-        title: Text(
-          "Hammies  Mandalian",
-          style: TextStyle(
-            fontSize: 16,
-            fontWeight: FontWeight.bold,
-            color: appBarTitleColor,
-            letterSpacing: 2,
-            wordSpacing: 2,
-          ),
+        title: Row(
+          children: [
+            Image.asset(
+              'assets/logo.png',
+              fit: BoxFit.contain,
+              height: 40,
+            ),
+            Container(
+              padding: const EdgeInsets.only(left: 10),
+              child: Text("YANGON DRIVING SCHOOL",
+
+                style: TextStyle(
+                    color: Colors.black,
+                    fontSize: 13,
+                    wordSpacing: 2,
+                    letterSpacing: 2),
+              ),
+            ),
+          ],
         ),
       ),
       body: SafeArea(

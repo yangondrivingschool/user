@@ -9,7 +9,10 @@ import 'package:hive/hive.dart';
 import 'package:hive_flutter/hive_flutter.dart';
 
 import '../../controller/home_controller.dart';
+import '../../data/constant.dart';
+import '../../routes/routes.dart';
 import '../../ui/q&a/tab_bar.dart';
+import '../../utils/widget/widget.dart';
 import '../../widgets/home_category.dart';
 import '../../widgets/home_items.dart';
 import '../../widgets/home_pickup.dart';
@@ -38,6 +41,9 @@ class HomeView extends StatelessWidget {
                         Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
+
+
+
                             Text(
                               'Su Su',
                               textAlign: TextAlign.center,
@@ -80,13 +86,20 @@ class HomeView extends StatelessWidget {
                           children: [
 
 
-                            ClipRRect(
-                              borderRadius: BorderRadius.circular(15),
-
-                              child: CachedNetworkImage(
-                                width: 40,
-                                imageUrl: "https://play-lh.googleusercontent.com/I-Yd5tJnxw7Ks8FUhUiFr8I4kohd9phv5sRFHG_-nSX9AAD6Rcy570NBZVFJBKpepmc=w240-h480-rw",
-                              ),
+                            InkWell(
+                              onTap: () {
+                                if (controller.currentUser.value == null) {
+                                  controller.signInWithGoogle(userProfileUrl);
+                                } else {
+                                  Get.toNamed(userProfileUrl);
+                                }
+                              },
+                              child: Obx(() {
+                                return circularNetworkImage(
+                                  controller.currentUser.value?.image ?? userImage,
+                                  20,
+                                );
+                              }),
                             ),
 
                             SizedBox(height: 5),
