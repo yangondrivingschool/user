@@ -1,5 +1,3 @@
-import 'package:cached_network_image/cached_network_image.dart';
-import 'package:carousel_slider/carousel_slider.dart';
 import 'package:colours/colours.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
@@ -14,6 +12,7 @@ import '../../utils/widget/widget.dart';
 import '../../widgets/home_category.dart';
 import '../../widgets/home_items.dart';
 import '../../widgets/home_pickup.dart';
+import 'hot.dart';
 
 class HomeView extends StatelessWidget {
   const HomeView({Key? key}) : super(key: key);
@@ -180,6 +179,8 @@ class HomeView extends StatelessWidget {
                               children: [
                                 ElevatedButton(
                                   onPressed: () {
+                                    Navigator.push(context,
+                                    MaterialPageRoute(builder: (context) => HotView()));
                                   },
                                   child: Image.asset(
                                     'assets/dl.png',
@@ -348,11 +349,6 @@ class HomeView extends StatelessWidget {
 
                               ],
                             ),
-
-
-                            // Expanded(child: DrivingLicenseService(),),
-                            // Expanded(child: CarLicenseService(),),
-                            // Expanded(child: OtherServices(),),
                           ],
                         ),
 

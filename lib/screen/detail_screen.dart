@@ -280,7 +280,7 @@ class DetailScreen extends StatelessWidget {
                     Padding(
                       padding: const EdgeInsets.only(bottom: 30),
                       child: ClipRRect(
-                        borderRadius: BorderRadius.circular(20),
+                        borderRadius: BorderRadius.circular(10),
                         child: CachedNetworkImage(
                           imageUrl: controller.selectedItem.value.photo2,
                           width: 150,
@@ -299,7 +299,7 @@ class DetailScreen extends StatelessWidget {
                           Padding(
                             padding: const EdgeInsets.only(bottom: 30),
                             child: ClipRRect(
-                              borderRadius: BorderRadius.circular(20),
+                              borderRadius: BorderRadius.circular(10),
                               child: CachedNetworkImage(
                                 imageUrl: controller.selectedItem.value.photo3,
                                 width: 150,

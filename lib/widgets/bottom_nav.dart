@@ -53,22 +53,23 @@ class BottomNav extends StatelessWidget {
 
 
 
-            // Expanded(
-            //   child: Column(
-            //     children: [
-            //       IconButton(
-            //         onPressed: () {
-            //           controller.changeNav(1);
-            //         },
-            //         icon: Image.asset(
-            //           "assets/hotsale.png",
-            //           color: controller.navIndex.value == 1 ? Colors.grey : Colors.black,
-            //         ),
-            //       ),
-            //       Text("Hot Sales"),
-            //     ],
-            //   ),
-            // ),
+            Expanded(
+              child: Column(
+                children: [
+                  IconButton(
+                    onPressed: () {
+                      controller.changeNav(1);
+                    },
+                    icon: Image.asset(
+                      "assets/hotsale.png",
+                      color: controller.navIndex.value == 1 ? Colors.grey : Colors.black,
+                    ),
+                  ),
+                  Text("Hot Sales"),
+                ],
+              ),
+            ),
+
             Expanded(
               child: Column(
                 children: [

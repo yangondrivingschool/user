@@ -8,10 +8,7 @@ import 'package:url_launcher/url_launcher.dart';
 
 import '../controller/home_controller.dart';
 import '../data/constant.dart';
-import '../routes/routes.dart';
-import '../ui/q&a/tab_bar.dart';
 import '../widgets/bottom_nav.dart';
-import 'view/brand.dart';
 import 'view/cart.dart';
 import 'view/favourite.dart';
 import 'view/home.dart';
