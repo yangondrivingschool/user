@@ -7,7 +7,7 @@ const Color homeIndicatorColor = Colors.grey;
 const Color detailBackgroundColor = Colors.white;
 const Color detailTextBackgroundColor = Colors.white;
 ButtonStyle buttonStyle = ButtonStyle(
-  backgroundColor: MaterialStateProperty.all(Colors.orange),
+  backgroundColor: MaterialStateProperty.all(Colors.grey),
 );
 
 const String baseUrl = 'http://192.168.1.5:5000/api/v1/streaming/movie/';

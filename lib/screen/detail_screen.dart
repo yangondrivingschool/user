@@ -1,4 +1,5 @@
 import 'package:cached_network_image/cached_network_image.dart';
+import 'package:colours/colours.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:hive_flutter/hive_flutter.dart';
@@ -92,9 +93,6 @@ class DetailScreen extends StatelessWidget {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                SizedBox(
-                  height: 20,
-                ),
                 Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
@@ -106,8 +104,8 @@ class DetailScreen extends StatelessWidget {
                             Icons.star,
                             size: 20,
                             color: index <= controller.selectedItem.value.star
-                                ? homeIndicatorColor
-                                : Colors.grey,
+                                ? Colours.goldenRod
+                                : Colours.goldenRod,
                           ),
                         ),
                       ),
@@ -205,7 +203,7 @@ class DetailScreen extends StatelessWidget {
                     Column(
                       children: [
                         Text(
-                          "⏰ Delivery Time",
+                          "⏰ Training Hours",
                           style: TextStyle(
                             fontSize: 14,
                             fontWeight: FontWeight.bold,
@@ -216,7 +214,7 @@ class DetailScreen extends StatelessWidget {
                           height: 5,
                         ),
                         Text(
-                          "Within 3 Days",
+                          "10 Hours",
                           style: TextStyle(
                             fontSize: 14,
                             fontWeight: FontWeight.bold,
@@ -228,7 +226,7 @@ class DetailScreen extends StatelessWidget {
                     Column(
                       children: [
                         Text(
-                          "🛍️ Address",
+                          "📞  Phone No.1",
                           style: TextStyle(
                             fontSize: 14,
                             fontWeight: FontWeight.bold,
@@ -239,7 +237,7 @@ class DetailScreen extends StatelessWidget {
                           height: 5,
                         ),
                         Text(
-                          "Mandalay",
+                          "09 7654 909 89",
                           style: TextStyle(
                             fontSize: 14,
                             fontWeight: FontWeight.bold,
@@ -253,7 +251,7 @@ class DetailScreen extends StatelessWidget {
                       mainAxisAlignment: MainAxisAlignment.start,
                       children: [
                         Text(
-                          "📞 Contact Phone ",
+                          "📞  Phone No.2",
                           style: TextStyle(
                             fontSize: 14,
                             fontWeight: FontWeight.bold,
@@ -264,7 +262,7 @@ class DetailScreen extends StatelessWidget {
                           height: 5,
                         ),
                         Text(
-                          "     099 7511 4498",
+                          "    09 765 491007",
                           style: TextStyle(
                             fontSize: 14,
                             fontWeight: FontWeight.bold,
@@ -315,30 +313,30 @@ class DetailScreen extends StatelessWidget {
                     ),
                   ],
                 ),
-                // Column(
-                //   crossAxisAlignment: CrossAxisAlignment.start,
-                //   mainAxisAlignment: MainAxisAlignment.start,
-                //   children: [
-                //     Text(
-                //       "🏠 Shop - 1  ( Thanlyin )",
-                //       style: TextStyle(
-                //         fontSize: 16,
-                //         fontWeight: FontWeight.bold,
-                //         color: Colors.grey,
-                //       ),
-                //     ),
-                //     SizedBox(
-                //       height: 5,
-                //     ),
-                //     Text(
-                //       'အမှတ် 116 ၊ သတိပဌာန်လမ်း ၊ မြို့မတောင်ရပ်ကွက် ၊ သန်လျင်မြို့နယ် ၊ ရန်ကုန်မြို့။',
-                //       style: TextStyle(
-                //         fontSize: 15,
-                //         color: Colors.black,
-                //       ),
-                //     )
-                //   ],
-                // ),
+                Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  children: [
+                    Text(
+                      "🏠 သင်တန်းကျောင်း လိပ်စာ",
+                      style: TextStyle(
+                        fontSize: 16,
+                        fontWeight: FontWeight.bold,
+                        color: Colors.grey,
+                      ),
+                    ),
+                    SizedBox(
+                      height: 5,
+                    ),
+                    Text(
+                      'အမှတ်(၉) ၊ ဧရာဝဏ်လမ်းမကြီး ၊ (၈)ရပ်ကွက် ၊ သာကေတမြို့နယ် ၊ ရန်ကုန်မြို့။',
+                      style: TextStyle(
+                        fontSize: 15,
+                        color: Colors.black,
+                      ),
+                    )
+                  ],
+                ),
                 // SizedBox(
                 //   height: 20,
                 // ),
@@ -404,8 +402,8 @@ class DetailScreen extends StatelessWidget {
                   );
                 },
           child: controller.selectedItem.value.count! > 0
-              ? Text("၀ယ်ယူပြီး")
-              : Text("၀ယ်ယူရန်"),
+              ? Text("Enrolled")
+              : Text("Enroll Now"),
         ),
       ),
     );
@@ -500,7 +498,7 @@ class _AddToCartState extends State<AddToCart> {
                 Get.to(HomeScreen());
               }
             },
-            child: Text("၀ယ်ယူရန်"),
+            child: Text("Enroll Now"),
           ),
         ),
       ],

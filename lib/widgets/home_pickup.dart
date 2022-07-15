@@ -19,11 +19,11 @@ class HomePickUp extends StatelessWidget {
     return slideList.isEmpty
         ? const SizedBox()
         : Padding(
-            padding: const EdgeInsets.only(
+            padding: const EdgeInsets.only(left: 15,right: 15,
               bottom: 10,
             ),
             child: GFCarousel(
-              aspectRatio: 16 / 10,
+              aspectRatio: 16 / 9,
               autoPlay: true,
               viewportFraction: 1.0,
               hasPagination: true,
@@ -38,7 +38,7 @@ class HomePickUp extends StatelessWidget {
                   },
                   child: ClipRRect(
                     borderRadius: BorderRadius.all(
-                      Radius.circular(20),
+                      Radius.circular(10),
                     ),
                     child: CachedNetworkImage(
                       progressIndicatorBuilder: (context, url, status) {

@@ -1,16 +1,14 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:carousel_slider/carousel_slider.dart';
+import 'package:colours/colours.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:get/get.dart';
 import 'package:hammies_user/widgets/home_reward.dart';
-import 'package:hive/hive.dart';
-import 'package:hive_flutter/hive_flutter.dart';
-
 import '../../controller/home_controller.dart';
 import '../../data/constant.dart';
 import '../../routes/routes.dart';
+import '../../ui/driving_courses/booking.dart';
 import '../../ui/q&a/tab_bar.dart';
 import '../../utils/widget/widget.dart';
 import '../../widgets/home_category.dart';
@@ -22,7 +20,7 @@ class HomeView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final HomeController controller = Get.find();
+    HomeController _homeController = Get.find();
     return Scaffold(
       backgroundColor: Colors.white,
       body: SingleChildScrollView(
@@ -42,45 +40,59 @@ class HomeView extends StatelessWidget {
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
 
+                            Row(
+                              children: [
+                                Icon(
+                                  FontAwesomeIcons.coins,
+                                  color: Colours.yellow,
+                                  size: 20,
+                                ),
+                                SizedBox(width: 15),
 
+                                Text(
+                                  "${_homeController.currentUser.value?.points}""  Points",
+                                  textAlign: TextAlign.center,
+                                  style: TextStyle(
+                                    fontWeight: FontWeight.bold,
+                                    color: Colors.black,
+                                    fontSize: 16,
+                                    letterSpacing: 1,
+                                  ),
+                                ),
+                              ],
+                            ),
+
+                            SizedBox(height: 8),
 
                             Text(
-                              'Su Su',
+                              '1 Point = 1,000 Kyats',
                               textAlign: TextAlign.center,
                               style: TextStyle(
                                 fontWeight: FontWeight.bold,
                                 color: Colors.black,
-                                fontSize: 25,
+                                fontSize: 15,
                                 letterSpacing: 1,
                               ),
                             ),
-                            SizedBox(height: 5),
 
-                            Text(
-                              'Point 10000',
-                              textAlign: TextAlign.center,
-                              style: TextStyle(
-                                fontWeight: FontWeight.bold,
-                                color: Colors.black,
-                                fontSize: 13,
-                                letterSpacing: 1,
-                              ),
-                            ),
+
+
+
+
+
                           ],
                         ),
 
                         Text(
-                          '1 Point = 1000 Kyats',
+                          'Level - 1',
                           textAlign: TextAlign.center,
                           style: TextStyle(
                             fontWeight: FontWeight.bold,
                             color: Colors.black,
-                            fontSize: 13,
+                            fontSize: 16,
                             letterSpacing: 1,
                           ),
                         ),
-
-
 
                         Column(
                           children: [
@@ -105,15 +117,17 @@ class HomeView extends StatelessWidget {
                             SizedBox(height: 5),
 
                             Text(
-                              'Level - 1',
+                              _homeController.currentUser.value?.userName.toUpperCase() ?? "",
                               textAlign: TextAlign.center,
                               style: TextStyle(
                                 fontWeight: FontWeight.bold,
                                 color: Colors.black,
-                                fontSize: 13,
+                                fontSize: 15,
                                 letterSpacing: 1,
                               ),
                             ),
+
+
                           ],
                         ),
 
@@ -138,7 +152,11 @@ class HomeView extends StatelessWidget {
                             Column(
                               children: [
                                 ElevatedButton(
-                                  onPressed: () {},
+                                  onPressed: () {
+                                    Navigator.push(context,
+                                        MaterialPageRoute(builder: (context) => Booking()));
+
+                                  },
                                   child: Image.asset(
                                     'assets/dc.png',
                                     width: 55.0,
@@ -161,7 +179,8 @@ class HomeView extends StatelessWidget {
                             Column(
                               children: [
                                 ElevatedButton(
-                                  onPressed: () {},
+                                  onPressed: () {
+                                  },
                                   child: Image.asset(
                                     'assets/dl.png',
                                     width: 55.0,
@@ -227,11 +246,6 @@ class HomeView extends StatelessWidget {
 
                               ],
                             ),
-
-
-                            // Expanded(child: DrivingLicenseService(),),
-                            // Expanded(child: CarLicenseService(),),
-                            // Expanded(child: OtherServices(),),
                           ],
                         ),
 
@@ -241,7 +255,10 @@ class HomeView extends StatelessWidget {
                             Column(
                               children: [
                                 ElevatedButton(
-                                  onPressed: () {},
+                                  onPressed: () {
+                                    Navigator.push(context,
+                                        MaterialPageRoute(builder: (context) => QuestionTab()));
+                                  },
                                   child: Image.asset(
                                     'assets/qa.png',
                                     width: 55.0,
@@ -344,27 +361,6 @@ class HomeView extends StatelessWidget {
 
                     SizedBox(
                       height: 20,
-                    ),
-
-                    CarouselSlider(
-                      items: [
-                        CachedNetworkImage(
-                          imageUrl: "https://kzn.fra1.cdn.digitaloceanspaces.com/YDS/1.png",
-                          // "$baseUrl$itemUrl${controller.selectedItem.value.photo}/get",
-                        ),
-                        CachedNetworkImage(
-                          imageUrl: "https://kzn.fra1.cdn.digitaloceanspaces.com/YDS/2.png",
-                          // "$baseUrl$itemUrl${controller.selectedItem.value.photo}/get",
-                        ),
-                      ],
-                      options: CarouselOptions(
-                        initialPage: 0,
-                        enableInfiniteScroll: true,
-                        autoPlay: true,
-                        autoPlayInterval: Duration(seconds: 5),
-                        autoPlayAnimationDuration: Duration(milliseconds: 800),
-                        autoPlayCurve: Curves.ease,
-                      ),
                     ),
                   ],
                 ),

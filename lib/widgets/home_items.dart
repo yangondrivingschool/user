@@ -57,8 +57,8 @@ class HomeItems extends StatelessWidget {
                                   borderRadius: BorderRadius.circular(10.0),
                                   child: CachedNetworkImage(
                                     imageUrl: controller.getItems()[i].photo,
-                                    fit: BoxFit.cover,
-                                    height: 170,
+                                    fit: BoxFit.fill,
+                                    height: 191,
                                   ),
                                 ),
                               ),
@@ -103,11 +103,11 @@ class HomeItems extends StatelessWidget {
                                     ),
 
                                     //Button
-                                    Expanded(
-                                      child: ProductActionButton(
-                                        currentItem: controller.getItems()[i],
-                                      ),
-                                    ),
+                                    // Expanded(
+                                    //   child: ProductActionButton(
+                                    //     currentItem: controller.getItems()[i],
+                                    //   ),
+                                    // ),
                                   ],
                                 ),
                               ),

@@ -9,6 +9,7 @@ import 'package:url_launcher/url_launcher.dart';
 import '../controller/home_controller.dart';
 import '../data/constant.dart';
 import '../routes/routes.dart';
+import '../ui/q&a/tab_bar.dart';
 import '../widgets/bottom_nav.dart';
 import 'view/brand.dart';
 import 'view/cart.dart';
@@ -18,6 +19,7 @@ import 'view/hot.dart';
 import 'view/order_history.dart';
 
 List<Widget> _template = [
+
   HomeView(),
   // BrandView(),
   HotView(),
@@ -104,9 +106,11 @@ class _HomeScreenState extends State<HomeScreen> {
     return Scaffold(
       backgroundColor: Colors.white,
       appBar: AppBar(
+        automaticallyImplyLeading: false,
         backgroundColor: appBarColor,
         elevation: 0,
         title: Row(
+          mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Image.asset(
               'assets/logo.png',
@@ -119,7 +123,7 @@ class _HomeScreenState extends State<HomeScreen> {
 
                 style: TextStyle(
                   color: Colors.black,
-                    fontSize: 13,
+                    fontSize: 16,
                     wordSpacing: 2,
                     letterSpacing: 2),
               ),
@@ -129,30 +133,30 @@ class _HomeScreenState extends State<HomeScreen> {
         // centerTitle: true,
         actions: [
 
-          SizedBox(
-            width: 40,
-            child: ElevatedButton(
-              style: ButtonStyle(
-                alignment: Alignment.center,
-                backgroundColor: MaterialStateProperty.all(Colors.white),
-                elevation: MaterialStateProperty.resolveWith<double>(
-                  // As you said you dont need elevation. I'm returning 0 in both case
-                  (Set<MaterialState> states) {
-                    if (states.contains(MaterialState.disabled)) {
-                      return 0;
-                    }
-                    return 0; // Defer to the widget's default.
-                  },
-                ),
-              ),
-              onPressed: () => Get.toNamed(searchScreen),
-              child: FaIcon(
-                FontAwesomeIcons.search,
-                color: Colors.black,
-                size: 22,
-              ),
-            ),
-          ),
+          // SizedBox(
+          //   width: 40,
+          //   child: ElevatedButton(
+          //     style: ButtonStyle(
+          //       alignment: Alignment.center,
+          //       backgroundColor: MaterialStateProperty.all(Colors.white),
+          //       elevation: MaterialStateProperty.resolveWith<double>(
+          //         // As you said you dont need elevation. I'm returning 0 in both case
+          //         (Set<MaterialState> states) {
+          //           if (states.contains(MaterialState.disabled)) {
+          //             return 0;
+          //           }
+          //           return 0; // Defer to the widget's default.
+          //         },
+          //       ),
+          //     ),
+          //     onPressed: () => Get.toNamed(searchScreen),
+          //     child: FaIcon(
+          //       FontAwesomeIcons.search,
+          //       color: Colors.black,
+          //       size: 22,
+          //     ),
+          //   ),
+          // ),
 
           ElevatedButton(
             style: ButtonStyle(
@@ -178,7 +182,7 @@ class _HomeScreenState extends State<HomeScreen> {
             child: FaIcon(
               FontAwesomeIcons.facebookMessenger,
               color: Colors.blue,
-              size: 22,
+              size: 25,
             ),
           ),
           //User Profile
